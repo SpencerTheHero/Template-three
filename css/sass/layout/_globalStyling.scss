@@ -1,0 +1,87 @@
+/*Start Global Styling*/
+* {
+  @include prefixer(box-sizing, border-box, webkit moz o);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  @media #{$minSmall} {
+    width: 750px;
+  }
+  @media #{$minMedium} {
+    width: 970px;
+  }
+  @media #{$minLarge} {
+    width: 1170px;
+  }
+}
+%centerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%sectionMainStyling {
+  padding-top: $mainPadding;
+  padding-bottom: $mainPadding;
+  position: relative;
+}
+%containerGridSystem {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+/*Start Spikes Shape*/
+.spikes {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(135deg, #fff 25%, transparent 25%),
+      linear-gradient(225deg, #fff 25%, transparent 25%);
+    background-size: 40px 40px;
+    z-index: 1;
+  }
+}
+/*End Spikes Shape*/
+/*Start Dots Image*/
+.dots {
+  background-image: url(../../../images/dots.png);
+  width: 204px;
+  height: 186px;
+  position: absolute;
+  @media #{$maxMobile} {
+    display: none;
+  }
+}
+.dots-up {
+  top: 200px;
+  right: 0;
+}
+.dots-down {
+  bottom: 200px;
+  left: 0;
+}
+/*End Dots Image*/
+/*End Global Styling*/

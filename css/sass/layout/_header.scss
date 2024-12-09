@@ -1,0 +1,75 @@
+/*Start Header*/
+.header {
+  position: relative;
+  background-color: #fff;
+  @include prefixer(box-shadow, 0 0 10px #ddd, webkit moz o);
+  .container {
+    @media #{$minSmall} {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: $mainColor;
+      font-size: 26px;
+      font-weight: bold;
+      cursor: pointer;
+      height: 72px;
+      @extend %centerFlex;
+      @media #{$maxMobile} {
+        height: 40px;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > li > a {
+        @extend %centerFlex;
+        height: 72px;
+        position: relative;
+        color: #000;
+        padding: 0 30px;
+        text-transform: capitalize;
+        transition: $transion;
+        z-index: 1;
+        &:hover {
+          color: $mainColor;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 3px;
+          top: 0;
+          left: 0;
+          background-color: $mainColor;
+          transition: $transion;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #fafafa;
+          transition: $transion;
+          z-index: -1;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        @media #{$maxMobile} {
+          padding: 10px;
+          font-size: 14px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+/*End Header*/

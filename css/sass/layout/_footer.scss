@@ -1,0 +1,113 @@
+/*Start Footer*/
+.footer {
+  background-color: #191919;
+  @media #{$maxMobile} {
+    text-align: center;
+  }
+  .container {
+    padding-top: $mainPadding;
+    padding-bottom: $mainPadding;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    .owner-info {
+      h3 {
+        color:  #fff;
+        font-size: 50px;
+        margin: 0;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        @media #{$maxMobile} {
+          justify-content: center;
+        }
+        a {
+          @extend %centerFlex;
+          width: 50px;
+          height: 50px;
+          color: #b9b9b9;
+          background-color: #313131;
+          transition: $transion;
+          &.facebook:hover {
+            background-color: #1877f2;
+          }
+          &.twitter:hover {
+            background-color: #1da1f2;
+          }
+          &.youtube:hover {
+            background-color: red;
+          }
+        }
+      }
+      p {
+        color: #b9b9b9;
+        margin: 0;
+        line-height: 2;
+      }
+    }
+    .links {
+      li {
+        padding: 15px 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+      }
+      a {
+        color: #b9b9b9;
+        transition: $transion;
+        &:hover {
+          padding-left: 10px;
+          color: #fff;
+        }
+        i {
+          color: $mainColor;
+          margin-right: 10px;
+        }
+      }
+    }
+    .contact-info {
+      .contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        color: #b9b9b9;
+        @media #{$maxMobile} {
+          flex-direction: column;
+        }
+      }
+      i {
+        color: $mainColor;
+        font-size: 25px;
+        margin-right: 10px;
+        @media #{$maxMobile} {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+      .text {
+        line-height: $mainLineHeight;
+        flex: 1;
+        span {
+          display: block;
+        }
+      }
+    }
+    .images {
+      img {
+        width: 78px;
+        border: 3px solid #fff;
+        margin: 2px;
+      }
+    }
+  }
+  .copyrhgits {
+    color: #fff;
+    padding: 24px 0;
+    margin: 0;
+    border-top: 1px solid #444;
+    text-align: center;
+  }
+}
+/*End Footer*/

@@ -1,0 +1,16 @@
+// Import Main variables
+@import './sass/helpers/variables';
+// Import Main Mixins
+@import './sass/helpers/mixins';
+// Import Global Styling
+@import './sass/layout/globalStyling';
+// Import Header
+@import './sass/layout/header';
+// Import Buttons
+@import './sass/component/buttons';
+// Import Headings
+@import './sass/component/headings';
+// Import Home Page
+@import './sass/pages/homePage';
+// Import Footer
+@import './sass/layout/footer';
